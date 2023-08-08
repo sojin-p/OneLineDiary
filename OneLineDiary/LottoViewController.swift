@@ -12,6 +12,7 @@ import SwiftyJSON
 class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet var numberTextField: UITextField!
+    @IBOutlet var numberCollection: [UILabel]!
     
     @IBOutlet var bonusNumberLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
@@ -24,21 +25,14 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("1")
-        print("2")
-        
         callReauest(num: 1079)
 
-        print("4")
-        
         //원래 텍필의 인풋뷰는 키보드인데 이걸 피커로 바꾸는 것
         numberTextField.inputView = pickerView
         numberTextField.tintColor = .clear //커서 안보이게
         
         pickerView.delegate = self
         pickerView.dataSource = self
-        
-        print("5")
 
     }
     
@@ -58,9 +52,13 @@ class LottoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 let date = json["drwNoDate"].stringValue
                 let bonusNumber = json["bnusNo"].intValue
                 
-                print(date, bonusNumber)
+                for (index, i) in self.numberCollection.enumerated() {
+                    let num = json["drwtNo\(index + 1)"].intValue
+                    i.text = "\(num)"
+                }
+                
                 self.dateLabel.text = date //클로저,,라서인지 셀프를..붙이는..?
-                self.bonusNumberLabel.text = "\(bonusNumber)번"
+                self.bonusNumberLabel.text = "\(bonusNumber)"
                 
             case .failure(let error): //긴급점검 한다던지, 인터넷이 안된다던지
                 print(error)
