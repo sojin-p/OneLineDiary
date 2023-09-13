@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		232408342A808092000A1024 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 232408332A808092000A1024 /* SwiftyJSON */; };
 		232408372A8080A4000A1024 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 232408362A8080A4000A1024 /* Alamofire */; };
+		236E6BF92AB1A140008A0973 /* LottoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E6BF82AB1A140008A0973 /* LottoViewModel.swift */; };
+		236E6BFB2AB1A1F2008A0973 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E6BFA2AB1A1F2008A0973 /* Observable.swift */; };
+		236E6BFE2AB1A3B5008A0973 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E6BFD2AB1A3B5008A0973 /* APIManager.swift */; };
+		236E6C002AB1A4B1008A0973 /* LottoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236E6BFF2AB1A4B1008A0973 /* LottoData.swift */; };
 		23870E112A7B72BE00B743F0 /* LottoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23870E102A7B72BE00B743F0 /* LottoViewController.swift */; };
 		239071732A773A5900C52AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239071722A773A5900C52AFB /* AppDelegate.swift */; };
 		239071752A773A5900C52AFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239071742A773A5900C52AFB /* SceneDelegate.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236E6BF82AB1A140008A0973 /* LottoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewModel.swift; sourceTree = "<group>"; };
+		236E6BFA2AB1A1F2008A0973 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		236E6BFD2AB1A3B5008A0973 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		236E6BFF2AB1A4B1008A0973 /* LottoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoData.swift; sourceTree = "<group>"; };
 		23870E102A7B72BE00B743F0 /* LottoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoViewController.swift; sourceTree = "<group>"; };
 		2390716F2A773A5900C52AFB /* OneLineDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneLineDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239071722A773A5900C52AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236E6BF62AB1A120008A0973 /* Lotto */ = {
+			isa = PBXGroup;
+			children = (
+				23870E102A7B72BE00B743F0 /* LottoViewController.swift */,
+				236E6BF82AB1A140008A0973 /* LottoViewModel.swift */,
+				236E6BFA2AB1A1F2008A0973 /* Observable.swift */,
+			);
+			path = Lotto;
+			sourceTree = "<group>";
+		};
+		236E6BFC2AB1A382008A0973 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				236E6BFD2AB1A3B5008A0973 /* APIManager.swift */,
+				236E6BFF2AB1A4B1008A0973 /* LottoData.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		239071662A773A5900C52AFB = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +109,11 @@
 		239071712A773A5900C52AFB /* OneLineDiary */ = {
 			isa = PBXGroup;
 			children = (
+				236E6BFC2AB1A382008A0973 /* APIManager */,
+				236E6BF62AB1A120008A0973 /* Lotto */,
 				239071722A773A5900C52AFB /* AppDelegate.swift */,
 				239071742A773A5900C52AFB /* SceneDelegate.swift */,
 				239071782A773A5900C52AFB /* Main.storyboard */,
-				23870E102A7B72BE00B743F0 /* LottoViewController.swift */,
 				239071762A773A5900C52AFB /* AddViewController.swift */,
 				2390718C2A7752D800C52AFB /* DetailViewController.swift */,
 				239071C82A79F23200C52AFB /* TimelineViewController.swift */,
@@ -191,10 +219,14 @@
 				2390718A2A773BC600C52AFB /* DiaryTableViewCell.swift in Sources */,
 				239071872A773AD200C52AFB /* DiaryTableViewController.swift in Sources */,
 				239071C52A789B5B00C52AFB /* SettingTableViewController.swift in Sources */,
+				236E6C002AB1A4B1008A0973 /* LottoData.swift in Sources */,
 				2390718D2A7752D800C52AFB /* DetailViewController.swift in Sources */,
 				239071732A773A5900C52AFB /* AppDelegate.swift in Sources */,
 				2390718F2A77625600C52AFB /* Extesion+UIViewController.swift in Sources */,
+				236E6BF92AB1A140008A0973 /* LottoViewModel.swift in Sources */,
+				236E6BFB2AB1A1F2008A0973 /* Observable.swift in Sources */,
 				23870E112A7B72BE00B743F0 /* LottoViewController.swift in Sources */,
+				236E6BFE2AB1A3B5008A0973 /* APIManager.swift in Sources */,
 				239071752A773A5900C52AFB /* SceneDelegate.swift in Sources */,
 				239071942A777ADC00C52AFB /* SearchCollectionViewCell.swift in Sources */,
 			);
